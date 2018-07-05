@@ -467,5 +467,47 @@ namespace CustomList
         }
 
 
+        public void Zip_TwoLists2()
+        {
+            //Arrange
+            CustomList<int> myList1 = new CustomList<int>() { 1, 3, 5 };
+            CustomList<int> myList2 = new CustomList<int>() { 2, 4 };
+            CustomList<int> expected = new CustomList<int>() { 1, 2, 3, 4, 5 };
+            CustomList<int> actual;
+
+
+            //Act
+            actual = myList1.Zip(myList2);
+
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+        }
+
+        public void Zip_TwoLists2()
+        {
+            //Arrange
+            CustomList<int> myList1 = new CustomList<int>() { 1, 3, 4, 5 };
+            CustomList<int> myList2 = new CustomList<int>() { 2 };
+            CustomList<int> expected = new CustomList<int>() { 1, 2, 3, 4, 5 };
+            CustomList<int> actual;
+
+
+            //Act
+            actual = myList1.Zip(myList2);
+
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+        }
+
+
+
+
+
+
+
     }
 }
