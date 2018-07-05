@@ -1,0 +1,11 @@
+C:\Users\Chelsea\Desktop\C# projects\CustomList\CustomList1\bin\Debug\netcoreapp2.0\CustomList1.deps.json
+C:\Users\Chelsea\Desktop\C# projects\CustomList\CustomList1\bin\Debug\netcoreapp2.0\CustomList1.runtimeconfig.json
+C:\Users\Chelsea\Desktop\C# projects\CustomList\CustomList1\bin\Debug\netcoreapp2.0\CustomList1.runtimeconfig.dev.json
+C:\Users\Chelsea\Desktop\C# projects\CustomList\CustomList1\bin\Debug\netcoreapp2.0\CustomList1.dll
+C:\Users\Chelsea\Desktop\C# projects\CustomList\CustomList1\bin\Debug\netcoreapp2.0\CustomList1.pdb
+C:\Users\Chelsea\Desktop\C# projects\CustomList\CustomList1\obj\Debug\netcoreapp2.0\CustomList1.csprojAssemblyReference.cache
+C:\Users\Chelsea\Desktop\C# projects\CustomList\CustomList1\obj\Debug\netcoreapp2.0\CustomList1.csproj.CoreCompileInputs.cache
+C:\Users\Chelsea\Desktop\C# projects\CustomList\CustomList1\obj\Debug\netcoreapp2.0\CustomList1.AssemblyInfoInputs.cache
+C:\Users\Chelsea\Desktop\C# projects\CustomList\CustomList1\obj\Debug\netcoreapp2.0\CustomList1.AssemblyInfo.cs
+C:\Users\Chelsea\Desktop\C# projects\CustomList\CustomList1\obj\Debug\netcoreapp2.0\CustomList1.dll
+C:\Users\Chelsea\Desktop\C# projects\CustomList\CustomList1\obj\Debug\netcoreapp2.0\CustomList1.pdb
