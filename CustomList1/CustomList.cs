@@ -6,9 +6,11 @@ namespace CustomList
 {
     public class CustomList<T>
     {
-        private T[] myArray;
+        private T[] baseArray;
         private int count;
         private int capacity;
+        private int index;
+
         public int Count
         {
             get
@@ -32,20 +34,46 @@ namespace CustomList
         {
             get
             {
-                return myArray[i];
+                return baseArray[i];
             }
             set
             {
-                myArray[i] = value;
+                baseArray[i] = value;
             }
         }
 
+        public int Index
+        {
+            get
+            {
+                return index;
+            }
+            set
+            {
+                index = value;
+            }
+        }
 
         public CustomList()
         {
             count = 0;
-            capacity = 4;
-            myArray = new T[capacity];
+            capacity = 5;
+            baseArray = new T[capacity];
+        }
+
+
+        public int IndexOf(T item)
+        {
+     
+            for(int i = 0; i < 0; i++)
+            {
+               if( baseArray[i].Equals(item))
+               {
+                    index = i;
+               }
+            }
+
+            return index;
         }
 
 
@@ -55,24 +83,46 @@ namespace CustomList
 
             if (count >= capacity)
             {
-                capacity += 4;
+                capacity += 5;
                 T[] newArray = new T[capacity];
 
                
                 for (int i = 0; i < count; i++)
                 {
-                    newArray[i] = myArray[i];
+                    newArray[i] = baseArray[i];
                 }
 
-                myArray = newArray;
-                myArray[count] = item;
+                baseArray = newArray;
+                baseArray[count] = item;
                 count++;   
             }
             else
             {
-                myArray[count] = item;
+                baseArray[count] = item;
                 count++;
             }
+
+        }
+
+        public void Remove(T item)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                if (baseArray[i].Equals(item))
+                {
+                    //shift array
+                    count--;
+                }
+
+            }
+
+        }
+
+
+        public void AdjustArray()
+        {
+
+
 
         }
 
