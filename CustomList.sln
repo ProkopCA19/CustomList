@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomList", "CustomList1\CustomList.csproj", "{6050053F-70E2-4A39-B0DD-7E242684073C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomListTests", "CustomListTests2\CustomListTests.csproj", "{17460E8B-2F59-4D04-941B-F2CA3AD3C480}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomList", "CustomListNew\CustomList.csproj", "{D0E820DE-129B-40EA-BE6E-02E49C51060A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6050053F-70E2-4A39-B0DD-7E242684073C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6050053F-70E2-4A39-B0DD-7E242684073C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6050053F-70E2-4A39-B0DD-7E242684073C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6050053F-70E2-4A39-B0DD-7E242684073C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{17460E8B-2F59-4D04-941B-F2CA3AD3C480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{17460E8B-2F59-4D04-941B-F2CA3AD3C480}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17460E8B-2F59-4D04-941B-F2CA3AD3C480}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17460E8B-2F59-4D04-941B-F2CA3AD3C480}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0E820DE-129B-40EA-BE6E-02E49C51060A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0E820DE-129B-40EA-BE6E-02E49C51060A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0E820DE-129B-40EA-BE6E-02E49C51060A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0E820DE-129B-40EA-BE6E-02E49C51060A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

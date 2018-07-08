@@ -1,14 +1,12 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace CustomListTests2
+namespace CustomList
 {
     [TestClass]
     public class UnitTest1
     {
-        [TestClass]
-        public class UnitTest1
-        {
+        
             [TestMethod]
             public void Add_2Values_ToList()
             {
@@ -198,7 +196,7 @@ namespace CustomListTests2
 
                 //Assert
 
-                Assert.AreEqual(1, myList[0]);
+                Assert.AreEqual(expected, actual);
 
             }
 
@@ -223,7 +221,7 @@ namespace CustomListTests2
 
                 //Assert
 
-                Assert.AreEqual(6, myList[1]);
+                Assert.AreEqual(value1, myList[0]);
 
             }
 
@@ -315,8 +313,8 @@ namespace CustomListTests2
 
                 //Act
                 myList.Remove(10);
-                actual = myList.Count();
-
+            actual = myList.Count;
+        
                 //Assert
 
                 Assert.AreEqual(expected, actual);
@@ -334,7 +332,7 @@ namespace CustomListTests2
                 int actual;
 
                 //Act
-                myList.add(6);
+                myList.Add(6);
                 actual = myList.Count;
 
                 //Assert
@@ -428,7 +426,7 @@ namespace CustomListTests2
 
             [TestMethod]
 
-            public void Get_String_FromList3()
+            public void OverrideToString_GetsExpectedOutput()
             {
                 //Arrange
                 CustomList<int> myList = new CustomList<int>() { 1, 2, 3 };
@@ -487,7 +485,7 @@ namespace CustomListTests2
 
             }
 
-            public void Zip_TwoLists2()
+            public void Zip_TwoListsExpectCorrectOutcome()
             {
                 //Arrange
                 CustomList<int> myList1 = new CustomList<int>() { 1, 3, 4, 5 };
@@ -511,6 +509,6 @@ namespace CustomListTests2
 
 
 
-        }
+        
     }
 }

@@ -120,6 +120,24 @@ namespace CustomList
         }
 
 
+        public static CustomList<T> operator +(CustomList<T> firstList, CustomList<T> secondList)
+        {
+            CustomList<T> combinedList = firstList;
+            if (firstList != null && secondList != null)
+            {
+                for (int i = 0; i < secondList.count; i++)
+                {
+                    combinedList.Add(secondList[i]);
+                }
+            }
+            return combinedList;
+        }
+
+
+
+
+
+
 
 
         public CustomList<int> Zip(CustomList<int> myList2)

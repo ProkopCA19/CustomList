@@ -1,15 +1,15 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CustomList
 {
-    public class CustomList<T>
+    public class CustomList<T> : IEnumerable <T>
     {
         private T[] baseArray;
         private int count;
         private int capacity;
-        private int index;
 
         public int Count
         {
@@ -42,17 +42,7 @@ namespace CustomList
             }
         }
 
-        public int Index
-        {
-            get
-            {
-                return index;
-            }
-            set
-            {
-                index = value;
-            }
-        }
+      
 
         public CustomList()
         {
@@ -62,26 +52,15 @@ namespace CustomList
         }
 
 
-        public int IndexOf(T item)
-        {
-     
-            for(int i = 0; i < 0; i++)
-            {
-               if( baseArray[i].Equals(item))
-               {
-                    index = i;
-               }
-            }
-
-            return index;
-        }
-
-
-
         public void Add(T item)
         {
 
-            if (count >= capacity)
+            if( capacity > count)
+            {
+                baseArray[count] = item;
+                count++;
+            }
+            else if(count >= capacity)
             {
                 capacity += 5;
                 T[] newArray = new T[capacity];
@@ -96,56 +75,68 @@ namespace CustomList
                 baseArray[count] = item;
                 count++;   
             }
-            else
-            {
-                baseArray[count] = item;
-                count++;
-            }
+            
 
         }
 
-        public void Remove(T item)
+        public bool Remove(T item)
         {
+           
             for (int i = 0; i < count; i++)
             {
                 if (baseArray[i].Equals(item))
                 {
-                    //shift array
                     count--;
+                    AdjustArray(i);
+                    return true;
                 }
-
             }
-
+            return false;
         }
 
-
-        public void AdjustArray()
+        public void AdjustArray(int i)
         {
+            T[] newArray = new T[capacity];
 
+            for (int x = i; x < count; x++)
+            {
+                newArray[x] = baseArray[x + 1];
+                baseArray = newArray;
+            }
+        }
 
+        public override string ToString()
+        {
+            string myString = ", ";
 
+            for (int i = 0; i < count; i++) 
+                myString += baseArray[i];
+                return myString;
         }
 
 
+
+
+
+
+
+
+
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            for (int i = 0; i < baseArray.Length; i++)
+            {
+                yield return baseArray[i];
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
     }
 
 
-
-
-
-
-
-        //public IEnumerator<T> GetEnumerator()
-        //{
-        //    for (int i = 0; i < myArray.Length; i++)
-        //    {
-        //        yield return myArray[i];
-        //    }
-        //}
-
-        //IEnumerator IEnumerable.GetEnumerator()
-        //{
-        //    throw new NotImplementedException();
-        //}
     
 }

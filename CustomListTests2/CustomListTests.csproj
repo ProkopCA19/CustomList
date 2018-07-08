@@ -7,8 +7,8 @@
     <ProjectGuid>{17460E8B-2F59-4D04-941B-F2CA3AD3C480}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CustomListTests2</RootNamespace>
-    <AssemblyName>CustomListTests2</AssemblyName>
+    <RootNamespace>CustomListTests</RootNamespace>
+    <AssemblyName>CustomListTests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -48,15 +48,15 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ListTests.cs" />
+    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CustomList1\CustomList.csproj">
-      <Project>{6050053f-70e2-4a39-b0dd-7e242684073c}</Project>
+    <ProjectReference Include="..\CustomListNew\CustomList.csproj">
+      <Project>{d0e820de-129b-40ea-be6e-02e49c51060a}</Project>
       <Name>CustomList</Name>
     </ProjectReference>
   </ItemGroup>
