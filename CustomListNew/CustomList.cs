@@ -156,15 +156,45 @@ namespace CustomList
 
 
 
-        public CustomList<T> Zip(CustomList<T> firstList)
+        public CustomList<T> Zip(CustomList<T> listToZip)
         {
-            CustomList<T> zippedList = firstList;
-            throw new NotImplementedException();
+            CustomList<T> zippedList = new CustomList<T>();
 
+            if (Count > listToZip.Count)
+            {
+                for (int i = 0; i < Count; i++)
+                {
+                    zippedList.Add(baseArray[i]);
+                    if (i < listToZip.Count)
+                    {
+                        zippedList.Add(listToZip[i]);
+                    }
+                }
+                return zippedList;
+            }
+            else if (Count < listToZip.Count)
+            {
+                for (int i = 0; i < listToZip.Count; i++)
+                {
+                    if (i < Count)
+                    {
+                        zippedList.Add(baseArray[i]);
+                    }
+                    zippedList.Add(listToZip[i]);
+                }
+                return zippedList;
+            }
+            else if (Count == listToZip.Count)
+            {
+                for (int i = 0; i < Count; i++)
+                {
+                    zippedList.Add(baseArray[i]);
+                    zippedList.Add(listToZip[i]);
+                }
+                return zippedList;
+            }
+            return zippedList;
         }
-
-
-
 
 
         public IEnumerator<T> GetEnumerator()

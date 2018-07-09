@@ -1,10 +1,11 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+
 namespace CustomList
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTest
     {
         
             [TestMethod]
@@ -446,15 +447,16 @@ namespace CustomList
             ///////////////////////////////////////////////////////////////////
 
 
-            [TestMethod]
+         [TestMethod]
+        
 
-            public void Zip_TwoLists()
+        public void Zip_TwoLists()
             {
                 //Arrange
                 CustomList<int> myList1 = new CustomList<int>() { 1, 3 };
                 CustomList<int> myList2 = new CustomList<int>() { 2, 4 };
                 CustomList<int> expected = new CustomList<int>() { 1, 2, 3, 4 };
-                CustomList<int> actual;
+                CustomList<int> actual = new CustomList<int>();
 
 
                 //Act
@@ -466,15 +468,14 @@ namespace CustomList
 
             }
 
-
+            [TestMethod]
             public void Zip_TwoLists2()
             {
                 //Arrange
                 CustomList<int> myList1 = new CustomList<int>() { 1, 3, 5 };
                 CustomList<int> myList2 = new CustomList<int>() { 2, 4 };
                 CustomList<int> expected = new CustomList<int>() { 1, 2, 3, 4, 5 };
-                CustomList<int> actual;
-
+                CustomList<int> actual = new CustomList<int>();
 
                 //Act
                 actual = myList1.Zip(myList2);
@@ -482,16 +483,17 @@ namespace CustomList
 
                 //Assert
                 Assert.AreEqual(expected, actual);
-
+         
             }
 
+            [TestMethod]
             public void Zip_TwoListsExpectCorrectOutcome()
             {
                 //Arrange
                 CustomList<int> myList1 = new CustomList<int>() { 1, 3, 4, 5 };
                 CustomList<int> myList2 = new CustomList<int>() { 2 };
                 CustomList<int> expected = new CustomList<int>() { 1, 2, 3, 4, 5 };
-                CustomList<int> actual;
+                CustomList<int> actual = new CustomList<int>();
 
 
                 //Act
@@ -499,8 +501,10 @@ namespace CustomList
 
 
                 //Assert
+           
                 Assert.AreEqual(expected, actual);
-
+                
+                
             }
 
 
