@@ -122,27 +122,45 @@ namespace CustomList
 
         public static CustomList<T> operator +(CustomList<T> firstList, CustomList<T> secondList)
         {
-            CustomList<T> combinedList = firstList;
+            CustomList<T> thirdList = firstList;
             if (firstList != null && secondList != null)
             {
                 for (int i = 0; i < secondList.count; i++)
                 {
-                    combinedList.Add(secondList[i]);
+                    thirdList.Add(secondList[i]);
                 }
             }
-            return combinedList;
+            return thirdList;
+        }
+
+
+        public static CustomList<T> operator -(CustomList<T> firstList, CustomList<T> secondList)
+        {
+            if (firstList !=null && secondList !=null)
+            {
+                for(int i = 0; i < firstList.count; i++)
+                {
+                    for( int x =0; x < secondList.count; x++)
+                    {
+                        if (secondList[x].Equals(firstList[i]))
+                        {
+                            firstList.Remove(firstList[i]);
+
+                        }
+                    }
+                }
+        
+            }
+            return firstList;
         }
 
 
 
-
-
-
-
-
-        public CustomList<int> Zip(CustomList<int> myList2)
+        public CustomList<T> Zip(CustomList<T> firstList)
         {
+            CustomList<T> zippedList = firstList;
             throw new NotImplementedException();
+
         }
 
 
@@ -162,6 +180,25 @@ namespace CustomList
             throw new NotImplementedException();
         }
 
-  
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+        
+
