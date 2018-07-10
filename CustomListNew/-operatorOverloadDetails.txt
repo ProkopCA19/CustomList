@@ -1,0 +1,23 @@
+The CustomList<T> operator- subtracts one instance of a custom list class from another instance of a custom list class.
+
+
+Syntax
+	public static CustomList<T> operator -(
+
+	CustomList<T> firstList
+	CustomList<T> secondList
+	)
+      
+
+Parameters
+	firstList
+		Type: T
+		The list you are removing another list from
+	secondList
+		Type: T
+		The list that is removed 
+
+
+Return Value
+	Type: CustomList<T>
+	Returns a list without the removed items
